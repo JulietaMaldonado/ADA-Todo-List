@@ -1,4 +1,6 @@
 body{
   background-image: url(https://img.freepik.com/free-vector/background-gradient-green-tones_23-2148360340.jpg?size=626&ext=jpg&ga=GA1.1.2116175301.1701043200&semt=ais);
   background-size: cover;
+  margin: 0;
+  padding: 0;
 }
