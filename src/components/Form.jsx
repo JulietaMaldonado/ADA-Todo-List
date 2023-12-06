@@ -8,9 +8,12 @@ import {
     Button,
     Icon
   } from '@chakra-ui/react'
+import { useState } from 'react';
 
 
-export default function Form(){
+export default function Form({ add }){
+const [tasks, setTasks] = useState("")
+
     return <>
    <form style={{display: "flex", flexDirection: "row", width: "80%", margin: "auto"}} onSubmit={(e) => {
     e.preventDefault();
@@ -18,7 +21,7 @@ export default function Form(){
    }}>
      <FormControl style={{display: "flex", flexDirection: "column",width:"50%", margin: "20px"}}>
     <FormLabel style={{color:"white", fontFamily:"Smooch Sans", fontSize:"25px"}}>Tarea</FormLabel>
-    <Input type='text' style={{color:"white", fontFamily:"Roboto", fontSize:"20px"}} placeholder="Ingresa una tarea" />
+    <Input type='text' style={{color:"white", fontFamily:"Roboto", fontSize:"20px"}} placeholder="Ingresa una tarea" onChange={(e) => setTasks(e.target.value)}/>
     </FormControl>
     <FormControl style={{display: "flex", flexDirection: "column",width:"50%", margin: "20px"}}>
     <FormLabel style={{color:"white", fontFamily:"Smooch Sans", fontSize:"25px"}}>Seleccionar</FormLabel>
