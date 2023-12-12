@@ -4,8 +4,8 @@ import { DeleteIcon, CheckIcon } from '@chakra-ui/icons'
 
 export default function Todo({id, name, onClose}){
 
-    return <Box>
-        <Card style={{width:"40%", marginLeft: "auto", marginRight: "auto"}} key={id}>
+    return <Box style={{marginTop: "15px"}}>
+  <Card style={{width:"40%", marginLeft: "auto", marginRight: "auto"}} key={id}>
   <CardBody>
     <Text>{name}</Text>
     <Button><Icon as={CheckIcon}/>
